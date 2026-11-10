@@ -19,6 +19,7 @@ jobs:
         run: |
           mkdir -p "$(brew --repository)/Library/Taps/antontuzov"
           ln -s "$GITHUB_WORKSPACE" "$(brew --repository)/Library/Taps/antontuzov/homebrew-openmonkey"
+          brew trust antontuzov/openmonkey
 
       - name: Audit and style
         run: |
